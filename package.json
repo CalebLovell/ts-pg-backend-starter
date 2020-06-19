@@ -1,8 +1,9 @@
 {
 	"name": "ts-pg-backend-starter",
 	"description": "boilerplate starter for a backend with ts-node, typeorm, postgres, pgadmin and docker",
-	"license": "MIT",
+	"author": "Caleb Lovell",
 	"version": "0.0.1",
+	"license": "MIT",
 	"dependencies": {
 		"body-parser": "^1.18.1",
 		"dotenv": "^8.2.0",

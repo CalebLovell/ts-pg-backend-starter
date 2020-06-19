@@ -30,7 +30,7 @@ createConnection(config)
 		});
 
 		// Start Server
-		server.listen(7999);
-		console.log('Server is running on port 7999. Open here http://localhost:7999/ to test...');
+		const port = process.env.PG_PORT;
+		server.listen(7999, () => console.log(`Server is running on port ${port}. Open here http://localhost:${port}/ to test...`));
 	})
 	.catch(error => console.error(error));

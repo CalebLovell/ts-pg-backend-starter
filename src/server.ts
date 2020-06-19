@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { devConfig, prodConfig } from './config/ormConfig';
+import { devConfig, prodConfig } from './config/config';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { Request, Response } from 'express';
@@ -30,7 +30,8 @@ createConnection(config)
 		});
 
 		// Start Server
+		const host = process.env.PG_HOST;
 		const port = process.env.PG_PORT;
-		server.listen(7999, () => console.log(`Server is running on port ${port}. Open here http://localhost:${port}/ to test...`));
+		server.listen(port, () => console.log(`Server is running on port ${port}. Open here http://${host}:${port}/ to test...`));
 	})
 	.catch(error => console.error(error));

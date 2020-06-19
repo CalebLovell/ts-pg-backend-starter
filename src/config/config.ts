@@ -1,7 +1,5 @@
 import { ConnectionOptions } from 'typeorm';
 
-const num: number = Number(process.env.num);
-
 export const devConfig: ConnectionOptions = {
 	type: 'postgres',
 	host: 'localhost',

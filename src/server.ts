@@ -29,7 +29,7 @@ createConnection(config)
 			});
 		});
 
-		// Start server
+		// Start Server
 		server.listen(7999);
 		console.log('Server is running on port 7999. Open here http://localhost:7999/ to test...');
 	})

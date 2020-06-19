@@ -1,6 +1,6 @@
 {
 	"name": "ts-pg-backend-starter",
-	"description": "This repo is a boilerplate starter for a backend built with ts-node, typeorm, postgres, and docker",
+	"description": "boilerplate starter for a backend with ts-node, typeorm, postgres, pgadmin and docker",
 	"license": "MIT",
 	"version": "0.0.1",
 	"dependencies": {
@@ -26,6 +26,6 @@
 		"typescript": "3.3.3333"
 	},
 	"scripts": {
-		"start": "ts-node src/index.ts"
+		"start": "ts-node src/server.ts"
 	}
 }

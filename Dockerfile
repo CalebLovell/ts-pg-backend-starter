@@ -1,12 +1,17 @@
-FROM node:12.18.1
+FROM node:12-alpine
 
-WORKDIR /app
+USER me
 
-COPY package.json yarn.lock ./
+RUN mkdir /home/me/app
 
-RUN npm install
+WORKDIR /home/me/app
 
-COPY . .
+COPY --chown=me:me package.json yarn.lock ./
+
+RUN yarn --frozen-lockfile
+
+COPY --chown=me:me . .
 
 EXPOSE 7999
-CMD npm start
+
+CMD yarn start
